@@ -49,7 +49,21 @@ else:
 stds = input('Enter 1 if the patient has any STDs, 0 otherwise: ')
         
 if stds == '1':
-    pass
+    stds_no = input('Enter number of STDs: ')
+    stds_condylomatosis = input('Enter 1 if the patient had Condylomatosis, 0 otherwise: ')
+    stds_cervical_condylomatosis = input('Enter 1 if the patient had Cervical Condylomatosis, 0 otherwise: ')
+    stds_vaginal_condylomatosis = input('Enter 1 if the patient had Vaginal Condylomatosis, 0 otherwise: ')
+    stds_vulvo_perineal_condylomatosis = input('Enter 1 if the patient had Vulvo Perineal Condylomatosis, 0 otherwise: ')
+    stds_syphilis = input('Enter 1 if the patient had Syphilis, 0 otherwise: ')
+    stds_pelvic_inflammatory_disease = input('Enter 1 if the patient had Peliv Inflammatory Disease, 0 otherwise: ')
+    stds_genital_herpes = input('Enter 1 if the patient had Genital Herpes, 0 otherwise: ')
+    stds_molluscum_contagiosum = input('Enter 1 if the patient had Molluscum Contagiosum, 0 otherwise: ')
+    stds_AIDS = input('Enter 1 if the patient had AIDS, 0 otherwise: ')
+    stds_HIV = input('Enter 1 if the patient had HIV, 0 otherwise: ')
+    stds_Hepatitis_B = input('Enter 1 if the patient had Hepatitis B, 0 otherwise: ')
+    stds_HPV = input('Enter 1 if the patient had HPV, 0 otherwise: ')
+    stds_diagnosis = input('Enter 1 if the patient had STD Diagnosis, 0 otherwise: ')
+
 else:    
     stds_no = '0'
     stds_condylomatosis = '0'
@@ -88,6 +102,7 @@ X_input = [[age, no_of_sexual_encounters, first_sexual_intercourse, no_of_pregan
 model_file_name = 'random_classifier_model_multiple.sav'
 loaded_model = joblib.load(model_file_name)
 result = loaded_model.predict(X_input)
+
 print('##################################################')
 print('\n')
 print('Output:-')
@@ -102,5 +117,3 @@ print('\n')
 print('Thank You, this CLI is provided by Team Bits Please')
 print('\n')
 print('##################################################')
-
-

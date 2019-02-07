@@ -197,3 +197,5 @@ highest_demand_drugs = highest_demand_drugs.sort_values(by=['frequency'], ascend
 g = sns.swarmplot(highest_demand_drugs['drug'], highest_demand_drugs['frequency'])
 g.set_xticklabels(g.get_xticklabels(), rotation=30)
 g.set_title('Highest Demand Drug Investment Options for Pharma Companies')
+
+plt.scatter()
