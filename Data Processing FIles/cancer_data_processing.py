@@ -7,15 +7,15 @@ Created on Wed Feb  6 11:14:27 2019
 """
 
 # Import
-import pandas as pd
 import numpy as np
+import pandas as pd
+import seaborn as sns 
+from sklearn import metrics
+import matplotlib.pyplot as plt
+from sklearn.externals import joblib
+from sklearn.metrics import confusion_matrix
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn import metrics
-from sklearn.metrics import confusion_matrix
-import matplotlib.pyplot as plt
-import seaborn as sns 
-from sklearn.externals import joblib
 from sklearn.multioutput import MultiOutputClassifier
 
 # Data Preprocessing
@@ -162,21 +162,3 @@ joblib.dump(multiple_target_classifier, model_file_name)
 loaded_model = joblib.load(model_file_name)
 result = loaded_model.score(X_test, y_test)
 print(result)
-
-
-# Predict Insurance Income
-
-cancer_data = cancer_data.reset_index()
-cancer_data = cancer_data.drop(columns=['index'])
-
-cancer_data_file_name = 'cancer_data'
-
-cancer_data.to_csv(cancer_data_file_name)
-
-base_premium = 1000000 # 10 lacs or 1 million
-
-cancer_data['Age'].value_counts()
-
-
-
-

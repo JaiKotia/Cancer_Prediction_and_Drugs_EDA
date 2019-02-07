@@ -10,9 +10,9 @@ import pandas as pd
 import seaborn as sns
 from nltk import FreqDist
 import matplotlib.pyplot as plt
+from wordcloud import WordCloud
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from wordcloud import WordCloud
 
 data = pd.read_csv('nightly-ClinicalEvidenceSummaries.tsv', delimiter='\t')
 
@@ -197,4 +197,3 @@ highest_demand_drugs = highest_demand_drugs.sort_values(by=['frequency'], ascend
 g = sns.swarmplot(highest_demand_drugs['drug'], highest_demand_drugs['frequency'])
 g.set_xticklabels(g.get_xticklabels(), rotation=30)
 g.set_title('Highest Demand Drug Investment Options for Pharma Companies')
-

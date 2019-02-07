@@ -11,6 +11,12 @@ import pandas as pd
 cancer_data = pd.read_csv('cancer_data')
 cancer_data = cancer_data.loc[:, ~cancer_data.columns.str.contains('^Unnamed')]
 
+print('##################################################')
+print('\n')
+print('Welcome!')
+print('\n')
+print('##################################################')
+
 base_premium = int(input('Enter Base Insure Premium: '))
 
 age = int(input('Enter age: '))
@@ -33,7 +39,11 @@ premium = sum * 10
 final_insurance_premium = int(base_premium + (base_premium * (sum / 10)))
 
 print('##################################################')
+print('\n')
 print('The Final Insurance Premium is:', final_insurance_premium)
+print('\n')
 print('##################################################')
+print('\n')
 print('Thank You, this CLI is provided by Team Bits Please')
+print('\n')
 print('##################################################')

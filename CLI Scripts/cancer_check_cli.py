@@ -11,7 +11,13 @@ import numpy
 
 numpy.warnings.filterwarnings('ignore')
 
+print('##################################################')
+print('\n')
+print('Welcome!')
+print('\n')
 print('Please begin by entering details about the patient')
+print('\n')
+print('##################################################')
 
 age = input('Please enter patients age: ')
 no_of_sexual_encounters = input('Enter number of sexual partners: ')
@@ -83,14 +89,18 @@ model_file_name = 'random_classifier_model_multiple.sav'
 loaded_model = joblib.load(model_file_name)
 result = loaded_model.predict(X_input)
 print('##################################################')
-print('Output')
-print('##################################################')
+print('\n')
+print('Output:-')
+print('\n')
 print('Hinselmann Prediction:', result[0][0])
 print('Schiller Prediction:', result[0][1])
 print('Citology Prediction:', result[0][2])
 print('Biopsy Prediction:', result[0][3])
+print('\n')
 print('##################################################')
+print('\n')
 print('Thank You, this CLI is provided by Team Bits Please')
+print('\n')
 print('##################################################')
 
 
